@@ -1,0 +1,45 @@
+flex box is otherwise known as display: flex;
+flex box short for flexible boxes is suppose to help with HTML container tag to be a box with flexible dimensions 
+this does allow to sort the boxes out in columns or rows. no only is this great for mobile web design to make websites more reactive to sizing changes you can also nest rows into columns and vice versa and it can go further into itself.
+
+to use flex box you need a container element as a parent and some children elements that are handled in said container will eventually provide some examples below.(HTML example)
+If you need to control the flex's direction you would you something called flex-direction and this will help you choose more specifically if you need either column or row
+cross axis: is referencing the orientation that is secondary example. If flex-direction: column; then the cross axis is the 'row' direction and vice version for flex-direction: row/default main flex orientation; cross axis becomes "column". 
+
+If you want to manipulate the contents in the container and mess with its alignment. The function justify-content: is where you want to start with a few that you might use will be as follows. flex-end, flex-start, center, space-around, and space-between
+now if you want to manipulate the contents in the container in the cross axis 
+
+You can put more child elements within an already existing child element to get more variablity with what each element can do. 
+
+if you have child elemnets that are pushing the bounds of your flex boxes and pushing the other elements to the very end of that is where flex-wrap comes in. by default there is "nowrap" but you can put in a "wrap" to move the contents to the next line
+
+If you want to control the amount of space the child element takes up you can use the functions flew-grow and flew-shrink.
+the first one is how much does the item in question do you want to take up on the page itself. It works numerically in giving primary space secondary space tertiary space. 1,2,3 respectively. shrink doesn't do the opposite of grow it gives primary space when the website resolution is getting smaller. 
+
+flex-grow, shrink, and basis are all not used very commonly and is instead just all clumped together under the function call "flex" and you can use all their numbers in "flex" in the respective order mentioned in the beginning of this sentence. or 1 number works fine too.
+
+align-self is a function that allows you to set individiual children values to do something independently in the cross axis. Options that you can use with this are "self-start", "self-end " using this forces the items to be flush in the alignment container.
+and the other options from flex start end center and stretch also work as well for this too.
+
+.container{ (parent functions)
+    display: flex; /*this by default will sent everything in this container to a row*/
+    flex-wrap: wrap; /* by default flew wrap has "nowrap" set by default*/
+    gap:10px 34px; /*gap is a more specific way to add space between items in a container tag. First number is vertical second is horizontal. only 1 number does both directions*/
+    flex-direction: column; /* using this function it will force the children elements direction of everything to be vertical (columns) for this container tag*/
+    justify-content:flex-end; /*this forces the contents to the end of the row*/
+                    flex-start; /*this forces the contents to the beginning of the row. This is also by default */
+                    center; /*this forces the contents to the center of the row*/
+                    space-around; /*This puts equal space all long the main axis*/
+                    space-between; /*This puts equal space inbetween the values*/
+    align-items: stretch; /*this stretches the contents vertically*/ 
+                 flex-start and flex-end do the same as above just vertically
+}
+
+.item1 { (child functions)
+    *flex-grow: 1; /*this will take up more space than the other items. 0 is default and 1 is primary, 2 is secondary, etc*/
+    *flex-basis: 200px; /* this sets the starting conditions for the child element and then as the resolution changes it then follows grow and shrink as written*/
+    *flex shrink: 0; /*place holder to have all trio options in place.*/
+    *flex: 1 0 200px; /*this is the creme de la creme of the flex trio as it does all three in one you just have to insert their numbers respectively but you can use 1 number as well if need be.*/ - use this the most
+    align-self: ;
+    order: 3; /*this applies a new placement for this child item from number 1 to number 3 which then causes the other items to move down order*/
+}

@@ -1,0 +1,22 @@
+think of websites like tetris. At the end of the day you're just organizing all your elements in a mix rows and columns
+responsivity is key. the vingette of it is just build your website for mobile first then work from there.
+Remember your break points. James suggests 640px, 768px, 1024px for sml med and lrg
+Find a way freely practice your CSS on a junK HTML file and just edit the crap out of it and see how it works.
+try and find interesting Uniqe websites and try to mimic a quality from said website. Try and inspect the page and select the part that you want to try and reproduce and implement it in your own work.
+
+* { /*this is basically a wildcard where in CSS it controls everything. in terms of Heirarchy its at the top*/
+
+    border: 1px solid black !important /*this gives you a thin black border around everything which can help you visualize */
+}
+
+@media (min-width: 640px) { /* this is an example of how to use @media in short this will start following the changes below once the min-width of the page is bigger than 640px*/
+
+    header button,
+    header input {
+        font-size: 1.2em;
+    } 
+
+    p {
+        font-size: 1em;
+    }
+}

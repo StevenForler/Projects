@@ -1,0 +1,118 @@
+<!--using the "!" will be registered by the intellisense(whatever that means) to bring up a boilerplate html doc to get you started-->
+<!--the attribute is what goes inside of a tag-->
+<!--the head tag is the meta data about the page-->
+<!--title tag helps title the website mainly the tab section in the browser-->
+<!--the body tag is where you put the text and information that goes onto the website.-->
+<!--the header,footer and main tags are all part of the body tag that are used to put information in the body of the page in specific ways-->
+<!-- doing the shortcut on windows for commenting out written code is ctrl+/ just make sure the cursur is on the line you want -->
+<!--for text that are meant to be links they should be surrounded by "Anchors" so replacing <div></div> instead we do <a></a> and we add an attribute with the link in question-->
+<!--span tags are the only spacer tags that can be used within a paragraph tag-->
+<!-- Section tags are used to divide a section which can be used in headers, footers, chapters,etc. -->
+<!--multi-cursor function exist to use it you hold ALT+left click so as long as you hold ALT the more cursors appear-->
+<!--styling in HTML is possible just not very common its called "inline style" and you can edit and update lines to change color and font along with other things -->
+<!-- class's can be added to any element/tag as an attribute. which are useful to help to point to something more specific in CSS than just the nav tag or div tag etc
+ so that you're not effecting all tags under a div tag or something like that. you can add multiple attributes to a class you just need to add a space to separateclass="grayLink" . -->
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>google repro project </title>
+    <!-- you can do CSS within the HTML doc however that will make the file bulky with all the add-ons
+    I will put an example of how to do it you have to place it in the head tag of the document -->
+    <!-- 
+    <style>
+        button {
+            color: green; -- labeling the button tag with curly brackets and adding the style of color green will make all the button font green!
+        }
+        a {
+            color: lavender; -- this changes the hyperlink color from blue to lavender
+        }
+    </style> -->
+    <link rel="stylesheet"
+    href="styles.css"/> <!-- this is how you reference other exisitng files to add to HTML the link tag is a self closing tag-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" 
+    referrerpolicy="no-referrer" /> <!--https://cdnjs.com/libraries/font-awesome/6.4.2 this is where this link ref is pulled from-->
+
+</head>
+<body>
+    <header>
+        <nav>
+            <a class="grayLink" href="#add_a_link">
+                <p>About</p>
+            </a>
+            <a class="grayLink" href="#add_a_link">
+                <p>Store</p>
+            </a>
+        </nav>
+        <section>
+            <a class="whiteLink" href="#add_a_link">
+                <p>Gmail</p>
+            </a>
+            <a class="whiteLink" href="#add_a_link">
+                <p>Images</p>
+            </a>
+            <a class="whiteLink" href="#add_a_link">
+                <i class="fa-solid fa-list-ul"></i>
+            </a>
+            <a href="#add_a_link">
+                <!-- <p> Profile page </p> -->
+                 <img src="/HTML&CSS/Google_Clone/Public/souptimmy_cube.jpg" alt="profile picture" />
+            </a>
+        </section>
+    </header>
+    <main>
+        <div>
+            <!-- there's a secondary class that can be added called id which if used MUST BE UNIQUE! -->
+            <h1 class="headerText" 
+            id="headerLogo">Google!</h1><!--h1 tags are reserved for big important information. eg: titles-->
+        </div>
+        <div class="searchBar">
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i> <!-- magnifying glass -->
+            </div>
+            <input/>
+            <div class="iconButtonContainer">
+                <button class="iconButton">
+                    <i class="fa-solid fa-microphone"></i> <!-- search by voice -->
+                </button>
+                <button class="iconButton">
+                    <i class="fa-solid fa-camera-retro"></i> <!-- search by image -->
+                </button>
+            </div>
+        </div>
+        <div class="searchButtonsContainer">
+            <button>
+                <p>Google Search</p>
+            </button>
+            <button>
+                <p>I'm Feeling Lucky</p>
+            </button>
+        </div>
+        <div class="languageSelection">
+            <p>Google offered in: <span>English</span> </p>
+        </div>
+    </main>
+    <footer>
+        <section>
+            <p>Worshington</p>
+        </section>
+        <section>
+            <div class="footerLink">
+                <a>Advertising</a>
+                <a>Business</a>
+                <a>How Search Work</a>
+            </div>
+            <div>
+                <a>Our third decade of climate action: join us</a>
+            </div>
+            <div class="footerLink">
+                <a>Privacy</a>
+                <a>Terms</a>
+                <a>Settings</a>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>

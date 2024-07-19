@@ -1,0 +1,180 @@
+/*There is a tagging priority in CSS. Keep in mind starting from top to bottomw id's, class, tags, then parent. 
+The only way to override this system is to use the "!important" tag in the section you need to override in question*/
+/* dev tool tips #1 always test your website for mobile first. Once you know your site looks good for that it will work for a computer as well
+    to test for screensizing for a website you go into inspect for the browser you're using and you would select either "responsive design mode" for firefox or "toggle device toolbar" for chrome and select your mobile device in question */
+    
+*{              /* "*" is used to catch all the elements in the HTML file*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #202124;
+    color: white;
+    /* padding: 14px; */
+    min-height: 100vh; /*100vh is 100% of the viewable height of a page being shown on the website this this wasn't here the page would end where the text does*/
+    /* doing both lines 13 and 14 almost give it the same look as before we added them but now we can take advantage of the flex display.
+    without flex-direction it would force everything to be in a vertical layout */
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    /* when using a font-family in the body of the text it will override the font of the children sections in it. Unless one of those said children have a font type of their own,
+    and keeps said font as its default instead of taking on the body's font type */
+    font-family: sans-serif, 'Times New Roman', Times, serif; /*google has its own in house font that can't be used but its based on a sans-serif font so it will have to do*/
+}
+
+header {
+    display: flex; /*the display parameter just tells how to display the contents for where you put it*/
+    align-items: center; /*this parameter allows how to move the items in the container still respecting its boundaries */ /*w3schools.com has a CSS reference for multiple alignment types*/
+    justify-content: space-between; /*this works similarly to how Align-items works but instead of working in the horizontal plane it works in a vertical one*/
+    padding: 14px;
+
+}
+
+nav,
+section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+header section img { /*picture looks more wider than it is tall*/
+    max-width: 60px ;
+    border-radius: 50%;
+    border: 2px solid rgb(165, 19, 165) ;
+
+}
+
+/* to select a class to in CSS make sure to put a "."(period) in front of the name of said class you wanting. */
+.whiteLink {
+    color: white;
+}
+
+.grayLink {
+    color:lightgray;
+}
+
+a {
+    text-decoration: unset; /* unset will remove the underline on text that are intended to be a link*/
+    font-size: .95em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    /*doing this will help make the main part of the body take up as much text as possible. Which helps the footer be put at the bottom of the page.
+hence why we set the body's min-height to be 100vh*/
+/* this section is basically helping center the google logo, search bar and selectable icons to because of the align-items center element and justify content center element */
+    flex: 1;
+    /* display: flex; and flex-direction: column; are needed for the other lines to actually funtion. otherwise it continues to stay on the left. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    /* padding: 0 14px; */
+}
+ .headerText {
+    font-size: 5em; /* em is another way to sizing denotation like px but its more in reference to the default size in? (not exactually sure the difference) */
+    /* font-famliy: 'Times New Roman', Times, serif; this would force the google header logo to be times new roman but I want it to be san-serif so leaving for note review for later*/
+    color: white;
+}
+.searchBar{
+    display: flex;
+    width: 100%; /*for responsive web design keep in mind to use the percentage width of the page to help keep the correct size for said page but this alone is a problem.
+    this will keep basically be going if there isn't a limiter put on it so always put a max-width of some kind.*/
+    max-width: 700px;
+    margin: 0 auto; /*setting a margin on any element will give it essentially a border around the element you assigned it to.
+    You have have 2 parameters the first is vertical and second is horizontal if there only 1 it assumes its for both*/
+    gap: 14px;
+    border: 1px solid gray;
+    padding: 14px; /* using this works on everything on the inside of what element you're assigning it to. so everything in that will have increased space*/
+    border-radius: 25px;
+}
+/*#headerLogo {} this is how to tag for an id specifically.*/
+.searchBar:hover {
+    border-color: transparent;
+    background: #303134;
+}
+
+.iconButtonContainer {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.iconButton {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+input {
+    background: transparent;
+    outline: none;
+    border: unset;
+    color: white;
+    flex: 1;
+}
+
+.searchButtonsContainer {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+}
+
+.searchButtonsContainer button { /*you can specify tags that you want to focus on within a class to only effect those elements*/
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: #303134;
+    color: white;
+    cursor: pointer;
+}
+
+.searchButtonsContainer button:hover {
+    border: 1px solid darkgray;
+}
+
+.languageSelection span{
+    color: skyblue;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer > section {
+    padding: 14px;
+}
+
+footer > section:last-child { /* look into another explanation for what the ">" does for child element in each section*/
+    border-top: 1px solid darkgray;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footerLink {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footerLink a {
+    cursor: pointer;
+}
+
+@media (min-width: 540px) { /*for mobile practices adding this intandem with sections like footer or header or you need to have multiple flex directions at certain pixel densities this is a way to do it. */
+    footer > section:last-child{
+        flex-direction: row;
+    }
+}
