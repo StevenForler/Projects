@@ -7,3 +7,4 @@ console.log(4)
 console.log(4 + 4) 
 // to add an apostrophe in a string you can use \' to help ignore it so it doesn't break the full string weirdly
 console.log('I don\'t like how javascript works') 
+// values are what data type something is. for example. strings are just sentences and integer are just whole numbers and there are more like that
