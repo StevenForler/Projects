@@ -47,3 +47,12 @@ let Fruit = {blueberries: "lovely with Yogurt", cherries: "great intense flavor.
 // Array aka a list - similar to an object in that it store multiple values but it doesn't require keys to associate those values. Except for the index
 // JS uses its indexing system base as 0 as its start.
 let example_array = [6, 7, 1, 2, 3, 9, 7, 8, 1, 2, 8, 9, 3, 7]
+
+// you can pretty much assign any variable any data type.
+
+//Functions and Methods are similar to each other. Methods are a function defined within a class. Functions are a declaration like let and const
+
+function newFunction() //() is where to receive parameters/arguments
+    { // to envoke or call a function you need to treat it like an exisitng 
+
+    }
