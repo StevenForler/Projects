@@ -24,4 +24,26 @@ const sentence = " you will use this if you know this variable will not ever cha
 let secondVariable
 let firstVariable, thirdVariable
 
+secondVariable = " why the fuck is this here?!"
+
 // assignment by reference
+
+let fourthVariable = secondVariable // any changes made to these let instantiated variables must happen before this variable.
+
+// Data Types
+
+271982398123 // Number
+
+'This is a sentence' // string
+
+null // absence of a value
+
+undefined // Purposely wanting the value to be nothing
+
+true && false // Booleans
+
+let Fruit = {blueberries: "lovely with Yogurt", cherries: "great intense flavor." , Pomegranates: "Love it as Juice." , Tomatoes: secondVariable} // object or aka a dictionary which use key value pair.
+
+// Array aka a list - similar to an object in that it store multiple values but it doesn't require keys to associate those values. Except for the index
+// JS uses its indexing system base as 0 as its start.
+let example_array = [6, 7, 1, 2, 3, 9, 7, 8, 1, 2, 8, 9, 3, 7]
