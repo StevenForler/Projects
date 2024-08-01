@@ -5,8 +5,8 @@ const filterOption = document.querySelector(".filter-todo");
 
 document.addEventListener("DOMContentLoaded", getLocalTodos);
 todoButton.addEventListener("click", addTodo);
-todoList.addEventListener("click", delectCheck);
-filterOption.addEventListener("change", filterTodo)
+todoList.addEventListener("click", deleteCheck);
+filterOption.addEventListener("change", filterTodo);
 
 function addTodo(event) {
     event.preventDefault();
@@ -34,5 +34,5 @@ function addTodo(event) {
 }
 
 function deleteCheck(e) {
-    
+
 }

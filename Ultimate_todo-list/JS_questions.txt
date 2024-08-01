@@ -1,0 +1,5 @@
+what do these lines do for this code.
+-- document.querySelector(".todo-input");
+-- document.addEventListener("DOMContentLoaded", getLocalTodos);
+-- const todoDiv = document.createElement("div");
+-- newTodo.innerText = todoInput.value;
