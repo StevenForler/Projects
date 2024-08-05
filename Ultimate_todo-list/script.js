@@ -1,17 +1,18 @@
-//Here on is the initialization of the programs. Also giving the call functions for later to output on the page.
 
+//Selectors
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 
+//Event Listeners
 document.addEventListener("DOMContentLoaded", getLocalTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("change", filterTodo);
 
 function addTodo(event) {
-    event.preventDefault();
+    event.preventDefault(); //prevents form from submitting before you actually submit.
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
     const newTodo = document.createElement("li");
@@ -54,7 +55,7 @@ function deleteCheck(e) {
     }
 }
 
-//the functions that actually activate the calls set up in previous lines.
+
 function filterTodo(e) {
     const todos = todoList.childNodes;
     todos.forEach(function(todo) {
