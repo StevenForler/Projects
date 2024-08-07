@@ -51,8 +51,8 @@ function deleteTodo(e) {
     todo.classList.add("fall");
     //at the end
     removeLocalTodos(todo);
-    todo.addEventListener("transitionend", e => {
-      todo.remove();
+    todo.addEventListener("transitionend", e => { //this is to make sure that the transition once ends will remove the todo from the page
+      todo.remove(); //without it the todo will remain and just be on the page at 0 opacity
     });
   }
   if (item.classList[0] === "complete-btn") {
