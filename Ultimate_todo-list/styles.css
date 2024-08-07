@@ -27,13 +27,13 @@
     border: none;
     background: white;
   }
-  form button {
+  form button {/*apply lines 30 and 36 to the trash, complete and filter drop down buttons */
     color: #ff6f47;
     background: #f7fffe;
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  form button:hover {
+  form button:hover { /*decided to switch to JS writing to get the actions of the code to start working*/
     background: #ff6f47;
     color: white;
   }

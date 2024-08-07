@@ -1,4 +1,4 @@
-//Select DOM
+//Select DOM 
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
@@ -14,9 +14,9 @@ filterOption.addEventListener("click", filterTodo);
 
 function addTodo(e) {
   //Prevent natural behaviour
-  e.preventDefault();
+  e.preventDefault(); //more specifically in this case prevents the page from refreshing.
   //Create todo div
-  const todoDiv = document.createElement("div");
+  const todoDiv = document.createElement("div"); //createElement helps create an HTML element with a specific tag name
   todoDiv.classList.add("todo");
   //Create list
   const newTodo = document.createElement("li");
@@ -30,7 +30,7 @@ function addTodo(e) {
   todoInput.value = "";
   //Create Completed Button
   const completedButton = document.createElement("button");
-  completedButton.innerHTML = `<i class="fas fa-check"></i>`;
+  completedButton.innerHTML = `<i class="fas fa-check"></i>`; 
   completedButton.classList.add("complete-btn");
   todoDiv.appendChild(completedButton);
   //Create trash button
@@ -139,3 +139,6 @@ function getTodos() {
     todoList.appendChild(todoDiv);
   });
 }
+
+// DOM - which means Document Object Model. This allows for dynamic access and update content, structure and style of said document
+// classList - is a read-only property that is used to return CSS classes in the form of an array. This allows us to add, remove, replace, toggle, or check if a specified CSS class is there or not.

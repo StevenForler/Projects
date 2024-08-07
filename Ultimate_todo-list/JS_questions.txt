@@ -1,5 +1,5 @@
-what do these lines do for this code.
--- document.querySelector(".todo-input");
--- document.addEventListener("DOMContentLoaded", getLocalTodos);
--- const todoDiv = document.createElement("div");
--- newTodo.innerText = todoInput.value;
+What is DOM (Document Object Model)
+wwhat are event listers
+what defines as a event handler like what does that look like?
+JS Line 29: how does appending this to the variable on line 22 help accomplish this app?
+JS Line 33: this creates an element like createElement does previously but why do innerHTML over createElement?
