@@ -44,8 +44,8 @@ function addTodo(e) {
 
 function deleteTodo(e) {
   const item = e.target;
-
-  if (item.classList[0] === "trash-btn") {
+  //delete TODO
+  if (item.classList[0] === "trash-btn") { //CSS was updated to make the trash&check icons not selectable to allow the full button to be used. Line 84
     // e.target.parentElement.remove();
     const todo = item.parentElement;
     todo.classList.add("fall");

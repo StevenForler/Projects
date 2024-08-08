@@ -82,7 +82,7 @@
   }
   
   .fa-trash,
-  .fa-check {
+  .fa-check { /* referencing line 48 in script.js*/
     pointer-events: none;
   }
   
