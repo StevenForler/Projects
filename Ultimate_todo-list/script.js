@@ -44,7 +44,7 @@ function addTodo(e) {
 
 function deleteTodo(e) {
   const item = e.target;
-  //delete TODO
+  //delete todo
   if (item.classList[0] === "trash-btn") { //CSS was updated to make the trash&check icons not selectable to allow the full button to be used. Line 84
     // e.target.parentElement.remove();
     const todo = item.parentElement;
@@ -55,6 +55,7 @@ function deleteTodo(e) {
       todo.remove(); //without it the todo will remain and just be on the page at 0 opacity
     });
   }
+  //check mark
   if (item.classList[0] === "complete-btn") {
     const todo = item.parentElement;
     todo.classList.toggle("completed");
@@ -63,7 +64,7 @@ function deleteTodo(e) {
 }
 
 function filterTodo(e) {
-  const todos = todoList.childNodes;
+  const todos = todoList.childNodes; // node list allows you to use the forEach loop
   todos.forEach(function(todo) {
     switch (e.target.value) {
       case "all":
@@ -76,12 +77,13 @@ function filterTodo(e) {
           todo.style.display = "none";
         }
         break;
-      case "uncompleted":
-        if (!todo.classList.contains("completed")) {
+      case "incompleted":
+        if (!todo.classList.contains("completed")) { // the exclamation point reverse the goal of the sentence
           todo.style.display = "flex";
         } else {
           todo.style.display = "none";
         }
+        break;
     }
   });
 }

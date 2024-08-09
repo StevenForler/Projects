@@ -1,8 +1,12 @@
 What is DOM (Document Object Model)
 wwhat are event listers
-what defines as a event handler like what does that look like?
+
+what defines as a event handler like what does that look like? *re-write this question*
 since there isn't another div to attach the buttons to is appendChild in concept the same as just attaching/pinning something to give it the same attachment as the const on line 19
 JS Line 33: this creates an element like createElement does previously but why do innerHTML over createElement?
 follow up: is it possible to only do one over the other or do they both have situations where you can't replace one another
 for the deleteTodo function i'm assuming if I wanted to apply an animation for adding the todo I would have to do something similar.
 Work flow: is the general concensus that you always start with HTML and then CSS, then JS and then flop back and forth when need be. or is there like a rule of thumb that one can follow depending on the type of project it is.
+what is a node list and is a forEach loop similar to a for loop
+
+what is a classList. 
