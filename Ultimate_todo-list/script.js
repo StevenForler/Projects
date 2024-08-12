@@ -5,7 +5,7 @@ const todoList = document.querySelector(".todo-list");
 const filterOption = document.querySelector(".filter-todo");
 
 //Event Listeners
-document.addEventListener("DOMContentLoaded", getTodos);
+document.addEventListener("DOMContentLoaded", getTodos); // because of the add on to help this webpage to pull the todos from local storage with the creation of getTodos, an event listener had to be added
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteTodo);
 filterOption.addEventListener("click", filterTodo);
@@ -53,7 +53,7 @@ function deleteTodo(e) {
     removeLocalTodos(todo);
     todo.addEventListener("transitionend", e => { //this is to make sure that the transition once ends will remove the todo from the page
       todo.remove(); //without it the todo will remain and just be on the page at 0 opacity
-    });
+    }); 
   }
   //check mark
   if (item.classList[0] === "complete-btn") {
@@ -88,11 +88,12 @@ function filterTodo(e) {
   });
 }
 
-function saveLocalTodos(todo) {
+function saveLocalTodos(todo) { //This will save to local storage but this alone doesn't help the UI update to reflect the todo's after refresh. This includes the saveLocalTodos(todoInput.value) on line 26 the Function getTodos on line 114 is where that comes in
+  //Check for Todo
   let todos;
-  if (localStorage.getItem("todos") === null) {
+  if (localStorage.getItem("todos") === null) { // If we don't have one. it will create an empty array
     todos = [];
-  } else {
+  } else {// if we do have any amount of todos in local storage it grabs from local storage and have an array
     todos = JSON.parse(localStorage.getItem("todos"));
   }
   todos.push(todo);
@@ -111,13 +112,13 @@ function removeLocalTodos(todo) {
 }
 
 function getTodos() {
-  let todos;
+  let todos; // lines 115-120 are a repeat from lines 93-98
   if (localStorage.getItem("todos") === null) {
     todos = [];
   } else {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
-  todos.forEach(function(todo) {
+  todos.forEach(function(todo) { // this is basically copy and paste from the addTodo function from earlier but we removed the saveLocalStorage function and a minor change on line 127 from "inputTodo.value" to "todo" and omited the line "todoList.appendChild(todoDiv);"
     //Create todo div
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
