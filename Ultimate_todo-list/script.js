@@ -99,7 +99,8 @@ function saveLocalTodos(todo) { //This will save to local storage but this alone
   todos.push(todo);
   localStorage.setItem("todos", JSON.stringify(todos));
 }
-function removeLocalTodos(todo) {
+function removeLocalTodos(todo) { // this is for removing items from storage so refreshing the page doesn't bring it back. there is a check in the function deleteTodo for when to remove from local storage
+  // talking about the buttons relating to the listItems 
   let todos;
   if (localStorage.getItem("todos") === null) {
     todos = [];
@@ -107,8 +108,8 @@ function removeLocalTodos(todo) {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
   const todoIndex = todo.children[0].innerText;
-  todos.splice(todos.indexOf(todoIndex), 1); // first arguement what position do you want to remove an element, the second it how many do you want to remove. This only removes the array
-  localStorage.setItem("todos", JSON.stringify(todos)); // this helps basically updates local storage after the listItem has been removed
+  todos.splice(todos.indexOf(todoIndex), 1);
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
 
 function getTodos() {
