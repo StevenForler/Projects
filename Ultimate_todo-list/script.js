@@ -99,7 +99,8 @@ function saveLocalTodos(todo) { //This will save to local storage but this alone
   todos.push(todo);
   localStorage.setItem("todos", JSON.stringify(todos));
 }
-function removeLocalTodos(todo) {
+function removeLocalTodos(todo) { // this is for removing items from storage so refreshing the page doesn't bring it back. there is a check in the function deleteTodo for when to remove from local storage
+  // talking about the buttons relating to the listItems 
   let todos;
   if (localStorage.getItem("todos") === null) {
     todos = [];
@@ -107,7 +108,11 @@ function removeLocalTodos(todo) {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
   const todoIndex = todo.children[0].innerText;
+  //how he ended up finding what the inner text was by using console.log(todo) which helps us know if the class of todo is being pulled when deleting a todo item. 
+  //then he did console.log(todo.children) to get the children from the parent div and [0] just calls for the listItem(li) and innerText grabs for the name of said list item . 
   todos.splice(todos.indexOf(todoIndex), 1);
+  //This then helps get the index of the listItem to help then associate what item from local storage is being pulled from. 
+  //how he confirmed the index of an item he did console.log(todos.indexOf("*innerText of item")) to grab the index value of said listItem 
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
