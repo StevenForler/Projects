@@ -107,8 +107,8 @@ function removeLocalTodos(todo) {
     todos = JSON.parse(localStorage.getItem("todos"));
   }
   const todoIndex = todo.children[0].innerText;
-  todos.splice(todos.indexOf(todoIndex), 1);
-  localStorage.setItem("todos", JSON.stringify(todos));
+  todos.splice(todos.indexOf(todoIndex), 1); // first arguement what position do you want to remove an element, the second it how many do you want to remove. This only removes the array
+  localStorage.setItem("todos", JSON.stringify(todos)); // this helps basically updates local storage after the listItem has been removed
 }
 
 function getTodos() {
@@ -142,6 +142,6 @@ function getTodos() {
     todoList.appendChild(todoDiv);
   });
 }
-
+// If I wanted to have a way of keeping the check mark in place after I refresh the page, I would have to create a local storage in a similar way for the check mark button as was done for the trash button.
 // DOM - which means Document Object Model. This allows for dynamic access and update content, structure and style of said document
 // classList - is a read-only property that is used to return CSS classes in the form of an array. This allows us to add, remove, replace, toggle, or check if a specified CSS class is there or not.

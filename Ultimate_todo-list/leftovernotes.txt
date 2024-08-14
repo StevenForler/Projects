@@ -1,0 +1,3 @@
+todos.splice(todos.indexOf(todoIndex), 1); // first arguement what position do you want to remove an element, the second it how many do you want to remove. This only removes the array
+localStorage.setItem("todos", JSON.stringify(todos)); // this helps basically updates local storage after the listItem has been removed
+// If I wanted to have a way of keeping the check mark in place after I refresh the page, I would have to create a local storage in a similar way for the check mark button as was done for the trash button.
