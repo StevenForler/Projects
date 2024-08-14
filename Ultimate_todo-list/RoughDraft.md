@@ -26,6 +26,11 @@ This will be going over what videos and what elements from those videos do I wan
 * For box shadows use this [video](https://www.youtube.com/watch?v=JB2TZco4i84)
     - [ ] Have a background for the To-do list ( could be white or something)
 
+## CSS Animation reference websites
+* https://cssanimation.rocks/list-items/
+* https://css-tricks.com/animation-techniques-for-adding-and-removing-items-from-a-stack/
+* https://gsap.com/community/forums/topic/28536-animation-of-list-items-moving-up-and-disappearing/
+* https://www.geeksforgeeks.org/flutter-animate-items-in-list-using-animatedlist/
 
 
 ## Ideas
