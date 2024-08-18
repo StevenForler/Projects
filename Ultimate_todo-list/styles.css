@@ -85,7 +85,15 @@
   .fa-check { /* referencing line 48 in script.js*/
     pointer-events: none;
   }
-  
+  /* adding listItem animation*/
+  .slide-fade li {
+    transition: all 0.4s ease-out;
+    opacity: 0;
+  }
+  .slide-fade li.show {
+    opacity: 1;
+  }
+/*delete listItem animation*/
   .fall {
     transform: translateY(10rem) rotateZ(20deg);
     opacity: 0;

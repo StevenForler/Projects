@@ -40,6 +40,9 @@ function addTodo(e) {
   todoDiv.appendChild(trashButton);
   //attach final Todo
   todoList.appendChild(todoDiv);
+  //New listItem animation
+  const todo = item.parentElement;  
+  newTodo.classList.add("slide-fade");
 }
 
 function deleteTodo(e) {
