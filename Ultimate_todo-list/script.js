@@ -17,6 +17,7 @@ function addTodo(e) {
   e.preventDefault();
   //Create todo div
   const todoDiv = document.createElement("div");
+  //Since the li(todo) is being created via JS I don't have the knowledge on how to ad the "show" portion of the animation as I lack a reference.
   todoDiv.classList.add("todo");
   //Create list
   const newTodo = document.createElement("li");
@@ -40,9 +41,6 @@ function addTodo(e) {
   todoDiv.appendChild(trashButton);
   //attach final Todo
   todoList.appendChild(todoDiv);
-  //New listItem animation
-  const todo = item.parentElement;  
-  newTodo.classList.add("slide-fade");
 }
 
 function deleteTodo(e) {

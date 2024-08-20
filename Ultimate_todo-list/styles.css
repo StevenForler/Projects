@@ -56,7 +56,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: all 1s ease; /*makes transitions take about 1sec to start*/
+    transition: all 1s ease; /*makes transitions take about 1sec to start */
+    
   }
   .filter-todo {
     padding: 1rem;
@@ -86,7 +87,7 @@
     pointer-events: none;
   }
   /* adding listItem animation*/
-  .slide-fade li {
+  .slide-fade li{
     transition: all 0.4s ease-out;
     opacity: 0;
   }
