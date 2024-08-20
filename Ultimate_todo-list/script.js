@@ -16,8 +16,7 @@ function addTodo(e) {
   //Prevent natural behaviour
   e.preventDefault();
   //Create todo div
-  const todoDiv = document.createElement("div");
-  //Since the li(todo) is being created via JS I don't have the knowledge on how to ad the "show" portion of the animation as I lack a reference.
+  const todoDiv = document.createElement("div"); 
   todoDiv.classList.add("todo");
   //Create list
   const newTodo = document.createElement("li");
