@@ -44,7 +44,7 @@
   }
   
   .todo-list {
-    min-width: 30%;
+    min-width: 23%;
     list-style: none;
   }
   
@@ -57,11 +57,8 @@
     justify-content: space-between;
     align-items: center;
     transition: all 1s ease; /*makes transitions take about 1sec to start */
-    
   }
-  .filter-todo {
-    padding: 1rem;
-  }
+  
   .todo li {
     flex: 1;
   }
@@ -86,14 +83,7 @@
   .fa-check { /* referencing line 48 in script.js*/
     pointer-events: none;
   }
-  /* adding listItem animation*/
-  .slide-fade li{
-    transition: all 0.4s ease-out;
-    opacity: 0;
-  }
-  .slide-fade li.show {
-    opacity: 1;
-  }
+ 
 /*delete listItem animation*/
   .fall {
     transform: translateY(10rem) rotateZ(20deg);
@@ -140,9 +130,3 @@
     cursor: pointer;
     pointer-events: none;
   }
-  /* Transition */
-  /*
-  .select:hover::after {
-    transform: scale(1.5);
-  }
-  */

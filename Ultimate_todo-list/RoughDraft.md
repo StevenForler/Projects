@@ -15,14 +15,18 @@ This will be going over what videos and what elements from those videos do I wan
 * To have the UI has Mobile Friendly as possible (streamlined)
 
 ## video references
-* The main follow along [video](https://www.youtube.com/watch?v=q0-N_w0Op84)
+* The main follow along [video](https://www.youtube.com/watch?v=Ttf3CEsEwMQ)
     
 * Things I want to add and adjust to the base
-    - [ ] Move filter to be on its own line and with the background as well.
-    - [ ] make sure to add the delete animation as an entrance animation
-    - [ ] For task deletion animations use this [video](https://www.youtube.com/watch?v=Ttf3CEsEwMQ)
-    - [ ] add text within the input box that says "add your task" video [reference](https://www.youtube.com/watch?v=G0jO8kUrg-I)
+    - [x] Delete filter to clean up the look of the page
+    - [ ] Make it add new list items at the top of the list every time
+    - [ ] Adjust the user input to be curved
+    - [ ] Adjust the list item to be curved
+    - [ ] Remove black border when user is typing in the input field
+    - [ ] Change the opacity to the placeholder text in CSS
+    - [x] Insert a placeholder text that says "Add a Task" in the user input video [reference](https://www.youtube.com/watch?v=G0jO8kUrg-I)
     - [ ] At a username input at the top. Video [reference](https://www.youtube.com/watch?v=6eFwtaZf6zc)
+        - [ ] try to make this effect the website title as well. Places to start. [Link 1](https://www.geeksforgeeks.org/how-to-dynamically-change-the-title-of-web-page-using-javascript/), [Link 2](https://stackoverflow.com/questions/71439735/javascript-how-to-change-page-title-with-user-input)
 * For box shadows use this [video](https://www.youtube.com/watch?v=JB2TZco4i84)
     - [ ] Have a background for the To-do list ( could be white or something)
 
