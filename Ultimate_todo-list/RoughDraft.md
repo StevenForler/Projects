@@ -19,11 +19,17 @@ This will be going over what videos and what elements from those videos do I wan
     
 * Things I want to add and adjust to the base
     - [x] Delete filter to clean up the look of the page
+    - [ ] Look into how to add animations through JS or append CSS to a JS created li
+        * I neef to find a way to add a CSS element to give the li a appearance effect of some kind.
     - [ ] Make it add new list items at the top of the list every time
-    - [ ] Adjust the user input to be curved
-    - [ ] Adjust the list item to be curved
+        - things that will look into reordering list items.
+            * Refer back to this [stackoverflow](https://stackoverflow.com/questions/52986512/to-do-list-in-javascript-how-to-always-insert-the-new-item-on-top-of-the-list) question.
+            * consider looking into other options like using CSS to visually just change the list order
+    - [x] Adjust the user input to be curved
+    - [ ] Move "add task" button into the input field
+    - [x] Adjust the list item and trash button to be curved
     - [ ] Remove black border when user is typing in the input field
-    - [ ] Change the opacity to the placeholder text in CSS
+    - [x] Change the opacity to the placeholder text in CSS
     - [x] Insert a placeholder text that says "Add a Task" in the user input video [reference](https://www.youtube.com/watch?v=G0jO8kUrg-I)
     - [ ] At a username input at the top. Video [reference](https://www.youtube.com/watch?v=6eFwtaZf6zc)
         - [ ] try to make this effect the website title as well. Places to start. [Link 1](https://www.geeksforgeeks.org/how-to-dynamically-change-the-title-of-web-page-using-javascript/), [Link 2](https://stackoverflow.com/questions/71439735/javascript-how-to-change-page-title-with-user-input)

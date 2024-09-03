@@ -2,13 +2,13 @@
 const todoInput = document.querySelector(".todo-input");
 const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
-const filterOption = document.querySelector(".filter-todo");
+
 
 //Event Listeners
 document.addEventListener("DOMContentLoaded", getTodos);
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteTodo);
-filterOption.addEventListener("click", filterTodo);
+
 
 //Functions
 
@@ -21,10 +21,9 @@ function addTodo(e) {
   //Create list
   const newTodo = document.createElement("li");
   newTodo.innerText = todoInput.value;
-  //Save to local - do this last
+  
   //Save to local
   saveLocalTodos(todoInput.value);
-  //
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
   todoInput.value = "";
@@ -38,9 +37,12 @@ function addTodo(e) {
   trashButton.innerHTML = `<i class="fas fa-trash"></i>`;
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
+  
   //attach final Todo
   todoList.appendChild(todoDiv);
+  
 }
+
 
 function deleteTodo(e) {
   const item = e.target;
