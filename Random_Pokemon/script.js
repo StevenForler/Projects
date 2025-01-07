@@ -1,7 +1,4 @@
-// let pkmnId;
 
-// document.getElementById("rollPkmn").onclick = function(){
-//     pkmnId = Math.floor(Math.random() * 1025) +1;
 
 //     document.getElementById("pkmnNo").innerHTML = pkmnId;
 // }
