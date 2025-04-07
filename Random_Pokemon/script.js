@@ -1,27 +1,45 @@
-let pkmnId;
+async function fetchData(){
+    try{
+        const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+        if(!response.ok){
 
-document.getElementById("rollPkmn").onclick = function(){
-    pkmnId = Math.floor(Math.random() * 1025) +1;
+            throw new Error("Could not fetch resource");
+        }
+        const data = await response.json();
+        const pokemonSprite = data.sprites.front_default;
+        const imgElement = document.getElementById("pokemonSprite");
 
-    document.getElementById("pkmnNo").innerHTML = pkmnId;
+        imgElement.src = pokemonSprite;
+        imgElement.style.display = "block";
+        
+    }
+
+    catch(error){
+        console.error(error);
+    }
 }
 
+// Pokemon stats sections. look into pulling multiple
+// AI generated
+// async function fetchData(urls) {
+//     try {
+//       const promises = urls.map(url => fetch(url).then(response => response.json()));
+//       const results = await Promise.all(promises);
+//       return results;
+//     } catch (error) {
+//       console.error("Error fetching data:", error);
+//     }
+//   }
+  
+//   const apiBaseUrl = 'https://api.example.com';
+//   const endpoints = ['/endpoint1', '/endpoint2', '/endpoint3'];
+//   const urls = endpoints.map(endpoint => apiBaseUrl + endpoint);
+  
+//   fetchData(urls)
+//     .then(data => {
+//       console.log("Data from all endpoints:", data);
+//     });
 
-function generateRandomNumbers(count, min, max) {
-  // 1: Create a `Set` object
-  let uniqueNumbers = new Set();
-  while (uniqueNumbers.size < count) {
-    // 2: Generate each random number
-    uniqueNumbers.add(Math.floor(Math.random() * (max - min + 1)) + min);
-  }
-  // 3: Immediately insert them numbers into the Set...
-  return Array.from(uniqueNumbers);
-}
-// ...set how many numbers to generate from a given range
-console.log(generateRandomNumbers(1026, 1, 1026));
-
-//link https://www.smashingmagazine.com/2024/08/generating-unique-random-numbers-javascript-using-sets/
-
-
-
-// pokeapi has a total of 1302 records and after number 1024 record(#1025) it starts on a new set of numbers for variations/ forms for record 1025 and on the ID number starts 10001
+// pull stats from the pokemon being searched
+// have random pokemon generator button
